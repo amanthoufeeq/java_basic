@@ -85,3 +85,69 @@ var showstring=()=>
     }
 
 showstring();
+
+//Map
+
+var number=[1,2,3,4,5];
+var square = number.map((num)=>
+    {
+        return num*num;
+    })
+
+console.log(square);
+
+
+var fruits=["banana","Mango","orange"];
+var upper=fruits.map((fruit)=>
+{
+    return fruit.toUpperCase();
+})
+
+console.log(upper);
+
+//enhanced object literals
+
+var name="aman"
+var age=20
+
+var person=
+{
+    name,
+    age,
+    isStudent: true
+}
+console.log(person);
+
+//desturcturing
+
+var person =
+{
+    name:"Akhil",
+    age:20,
+    isStudent:true
+}
+var {name,age,isStudent}=person
+console.log(name);
+console.log(age);
+console.log(isStudent);
+
+//promises
+
+var promise=new Promise((resolve,reject)=>
+{
+    setTimeout(()=>
+    {
+        resolve("promise resolved")
+    },2000);
+})
+promise.then((result)=>
+{
+    console.log(result);
+})
+
+//spread operator
+
+var numbers=[1,2,3,4,5];
+var new_numbers=[...numbers,6,7,8];
+console.log(new_numbers);
+
